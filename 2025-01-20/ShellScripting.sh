@@ -51,6 +51,7 @@ sudo chmod 750 project_file # permission
 sudo useradd intern_user # user Creation
 sudo groupadd developers # Added to group
 sudo touch welcome.txt # File Creation
+echo "done"
 
 
 
