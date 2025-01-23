@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#p {
+  color: #555;
+  font-size: 1.2rem;
+}
+
+#butt {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #f1b648;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#butt.toggled {
+  background-color: #28A745;
+}
