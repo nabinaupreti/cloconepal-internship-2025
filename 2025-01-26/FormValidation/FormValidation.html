@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" type="module"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <form name="Form" id="survey-form">
+          <h1 id="title">Application for Permission to Date My Daughter</h1>
+          <p id="description">
+            <b>Note:</b> Form must be completed at least 21 days prior to the date.
+          </p>
+
+          <fieldset>
+            <legend>Personal Details</legend>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your name"
+                onchange="validateName()"
+                required
+              />
+              <div class="error" id="nameError"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Address:</label>
+              <input
+                type="text"
+                name="address"
+                id="address"
+                placeholder="Enter your address"
+                onchange="validateAddress()"
+                required
+              />
+              <div class="error" id="addressError"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="number">Phone Number:</label>
+              <input
+                type="tel"
+                name="number"
+                id="phone"
+                placeholder="Enter 10-digit phone number"
+                onchange="validatePhone()"
+                required
+              />
+              <div class="error" id="phoneError"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="iq">IQ:</label>
+              <input
+                type="number"
+                name="iq"
+                id="iq"
+                placeholder="Enter your IQ"
+                onchange="validateIQ()"
+              />
+              <div class="error" id="iqError"></div>
+            </div>
+
+            <p>
+              <label>Gender:</label><br />
+              <input type="radio" name="gender" id="male" value="male" required />
+              Male<br />
+              <input type="radio" name="gender" id="female" value="female" />
+              Female<br />
+              <input type="radio" name="gender" id="other" value="other" /> Other
+            </p>
+
+            <label for="date">Date of Proposed Outing:</label>
+            <input type="date" name="date" id="date" required />
+          </fieldset>
+
+          <fieldset>
+            <label for="requirement">Check All That Apply</label>
+            <p>
+              <input type="checkbox" id="ch1" onchange="validateCheckbox()" />
+              I have tattoos and/or piercings<br />
+              <input type="checkbox" id="ch2" onchange="validateCheckbox()" />
+              I am more than 2 years older than your daughter<br />
+              <input type="checkbox" id="ch3" onchange="validateCheckbox()" />
+              I own a panel van or V8 ute<br />
+              <input type="checkbox" id="ch4" onchange="validateCheckbox()" />
+              I work full-time<br />
+              <input type="checkbox" id="ch5" onchange="validateCheckbox()" />
+              My parents are rich<br />
+              <input type="checkbox" id="ch6" onchange="validateCheckbox()" />
+              The date is at a well-lit public location <br />
+            </p>
+            <div class="error" id="checkboxError"></div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Other Details</legend>
+            <label for="dropdown">Political Persuasion:</label>
+            <select id="dropdown">
+              <option value="left">Left Wing</option>
+              <option value="right">Right Wing</option>
+              <option value="conservative">Conservative</option>
+              <option value="nazi">Nazi</option></select
+            ><br />
+
+            <label for="dropdown2">Education Level Completed:</label>
+            <select id="dropdown2">
+              <option value="university">University</option>
+              <option value="college">College</option>
+              <option value="secondary">High School</option>
+              <option value="none">None</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Essay Section</legend>
+            <div>
+              <p>Explain why you want to date my daughter</p>
+              <textarea
+                id="msg"
+                name="user_message"
+                rows="4"
+                cols="50"
+                placeholder="Enter Text Here"
+                onchange="validateEssay()"
+                required
+              ></textarea>
+              <div class="error" id="essayError"></div>
+            </div>
+            <p>
+              Upload Police Clearance Certificate, Bank Statement and Medical
+              Certifiates here: <button>Attach Files</button>
+            </p>
+          </fieldset>
+
+          <div id="submitBtn">
+            <button type="submit" id="submit" onclick="validate(event)">
+              Submit Application
+            </button>
+          </div>
+        </form>
+      </div>
+      <div id="savedDataContainer" class="saved-data"></div>
+    </div>
+    <div id="snackbar"></div>
+  </body>
+</html>

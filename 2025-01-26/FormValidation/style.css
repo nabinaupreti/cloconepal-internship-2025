@@ -1,0 +1,222 @@
+/* General body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Center the form on the page */
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+h1#title {
+  text-align: center;
+  color: #2d3e50;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+#description {
+  text-align: center;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+/* Form fieldset styles */
+fieldset {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #333;
+  padding: 0 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+textarea {
+  height: 100px;
+}
+
+/* Error message styles */
+.error{
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+/* Submit button styles */
+#submitBtn {
+  text-align: center;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Layout for the checkbox and radio buttons */
+p {
+  margin: 10px 0;
+}
+
+/* Style for the checkboxes and radios for better spacing */
+p input[type="checkbox"],
+p input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Form reset and submit button styling */
+#submitBtn button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#submitBtn button:hover {
+  background-color: #45a049;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  bottom: 30px;
+  left: 50%;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.form-container {
+  flex: 1;
+  margin-right: 20px;
+}
+.saved-data {
+  flex: 1;
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.data-table th, .data-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.data-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
